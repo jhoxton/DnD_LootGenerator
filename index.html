@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
     <title>5e Loot Generator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
-    <script src="scripts/main.js"></script>
 </head>
-<body>
-    
-</body>
+<h1 class="title">Loot!</h1>
+<form>
+    <div class="blockLeft">
+        <h3 class="">Gear</h3>
+        <input type="number" placeholder="0" name="" min="0" class="numInput">
+          <span class="icon"><img src="" alt="Gear Icon"> </span>
+    </div>
+    <div class="blockRight">
+        <h3 class="">Weapons</h3>
+        <input type="number" placeholder="0" name="" min="0"class="numInput">
+        <span class="icon"> <img src="" alt="Weapon Icon"></span>
+    </div>
+    <div class="blockLeft">
+        <h3 class="">Trinkets</h3>
+        <input type="number" placeholder="0" name="" min="0"class="numInput">
+          <span class="icon"><img src="" alt="Trinket Icon"> </span>
+    </div>
+    <div class="blockRight">
+        <h3 class="">Gold</h3>
+        <input type="range" min="1" max="12"class="numInput">
+         <span class="icon"> <img src="" alt="Gold Icon"> </span>
+    </div>
+</form>
+<button type="submit" form="form1" value="Submit">Loot!</button>
+<div class="outputArea">
+    <textarea class="output">OUTPUT WILL GO HERE</textarea>
+</div>
+
 </html>
