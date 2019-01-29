@@ -1,5 +1,3 @@
-
-
 * {
     box-sizing: border-box;
 }
@@ -11,26 +9,30 @@
     width: 80%;
     border: 3px solid black;
     padding: 10px;
+    position: relative;
 }
 
 .outputBlock {
     border: 3px solid black;
     margin: 10px;
     padding: 10px;
+     max-width: 78%;
 }
 
 .innerBlock {
     position: relative;
 }
+
 .inputBlock {
     width: 40%;
-    margin: 10px;   
+    margin: 10px;
     font-family: 'Mina';
     font-size: 15px;
 }
+
 .goldiInputBlock {
     width: 100%;
-    margin: 10px;   
+    margin: 10px;
     font-family: 'Mina';
     font-size: 15px;
 }
@@ -42,14 +44,15 @@
     text-align: center;
     width: 50%;
     margin-left: 30%;
-    margin-right: 30%   
+    margin-right: 30%
 }
+
 .headingFont {
     font-family: 'Aclonica';
     font-size: 42px;
-margin: 0%;
-    
+    margin: 0%;
 }
+
 .lootButtonFont {
     font-family: 'Aclonica';
     font-size: 22px;
@@ -58,6 +61,7 @@ margin: 0%;
 .lootOutput {
     font-family: 'Mina';
     font-size: 15px;
+
 }
 
 .goldInput {
@@ -68,9 +72,12 @@ margin: 0%;
 
 .iconStyle {
     position: absolute;
-    top: 0px;
     right: 0px;
-    width: 10%;
-   
-
+    top: 0px;
+    /*height: auto;*/
+    width: 20%;
+    min-width: 100px;
+    margin-top: ;
+    margin-right: ;
+    border-radius: 50%;
 }
