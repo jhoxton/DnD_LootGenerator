@@ -370,12 +370,14 @@ var gearReturn = Array()
 var trinketReturn = Array()
 var weaponReturn = Array()
 
+//CLEAR AND RESET INPUT AND OUTPUTS ONLOAD
 var output = "";
+window.onload = resetInput;
 
+// GETS RANDOM GEAR ITEMS AND ADD THEM TO THE NEW GEAR ARRAY
 function genGear() {
   gearReturn.length = 0;
   output = "";
-  // GET RANDOM ITEMS AND ADD THEM TO THE NEW ARRAY
   var gearNumber = document.getElementById("gearNumberInput").value;
   for (var x = 0; x < gearNumber; x++) {
     const randGear = gearItems[Math.floor(Math.random() * gearItems.length - 1)];
@@ -384,7 +386,17 @@ function genGear() {
   gearReturn.forEach(print);
   document.getElementById("gearOutput").innerHTML = output;
 }
+
+
+
+
+
 // FORMAT OUTPUT STRING
 function print(value, index, array) {
   output = output + value + "<br>";
+}
+
+function resetInput() {
+  var clear = "";
+  document.getElementById('gearNumberInput').value = "";
 }
