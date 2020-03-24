@@ -1,6 +1,7 @@
 console.log("Welcome to the loot generator. If you're reading this, I'd say you know what you're doing (probably more so than me), so feel free to make any improvements!");
 
 // ARRAYS OF ALL ITEMS
+
 var gearItems = Array(
   "Abacus - 2gp, 2lb. ",
   "Acid (vial) - 25 gp, 1lb",
@@ -382,9 +383,13 @@ function genGear() {
   output = "";
   var gearNumber = document.getElementById("gearNumberInput").value;
   for (var x = 0; x < gearNumber; x++) {
-    const randGear = gearItems[Math.floor(Math.random() * gearItems.length - 1)];
-    gearReturn.push(randGear);
+    const gearRandom = gearItems[Math.floor(Math.random() * gearItems.length - 1)];
+    // if we ignore the data errors, they go away right?
+    if (gearRandom != undefined) {
+        gearReturn.push(gearRandom);
+    }
   }
+
   gearReturn.forEach(print);
   document.getElementById("gearOutput").innerHTML = output;
 }
@@ -396,8 +401,12 @@ function genWeapon() {
   var weaponNumber = document.getElementById("weaponNumberInput").value;
   for (var x = 0; x < weaponNumber; x++) {
     const weaponRandom = weaponItems[Math.floor(Math.random() * weaponItems.length - 1)];
-    weaponReturn.push(weaponRandom);
+
+    if (weaponRandom != undefined) {
+      weaponReturn.push(weaponRandom);
+    }
   }
+
   weaponReturn.forEach(print);
   document.getElementById("weaponOutput").innerHTML = output;
 }
@@ -409,8 +418,12 @@ function genTrinket() {
   var trinketNumber = document.getElementById("trinketNumberInput").value;
   for (var x = 0; x < trinketNumber; x++) {
     const trinketRandom = trinketItems[Math.floor(Math.random() * trinketItems.length - 1)];
-    trinketReturn.push(trinketRandom);
+
+    if (trinketRandom != undefined) {
+        trinketReturn.push(trinketRandom);
+    }
   }
+
   trinketReturn.forEach(print);
   document.getElementById("trinketOutput").innerHTML = output;
 }
