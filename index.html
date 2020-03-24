@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Mina' rel='stylesheet'>
-    <title>5e Loot Generator</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Mina' rel='stylesheet'>
+  <title>5e Loot Generator</title>
 </head>
 
 <body>
-    <div class="outerBlock">
-        <h3 class="headingFont">Gear</h3>
-        <input type="text" class="inputBlock" placeholder="Input" />
-        <div> 
-        <img src="images/gear.jpg" class="iconStyle"></img>
-        </div>
-        <div class="outputBlock">
-            OUTPUT
-        </div>
-        <button onClick="" class="button">
-            <div class="lootButtonFont"> Loot!</div>
-        </button>
+  <div class="outerBlock" >
+    <h3 class="headingFont" >Gear</h3>
+    <input type="number" class="inputBlock" placeholder="Input" id="gearNumberInput" />
+    <div>
+      <img src="images/gear.png" class="iconStyle"></img>
     </div>
+    <div class="outputBlock">
+      <p id="gearOutput"></p>
+    </div>
+    <button onClick="genGear()" class="button">
+      <div class="lootButtonFont"> Loot Gear!</div>
+    </button>
+  </div>
 
-    <div class="outerBlock">
-        <h3 class="headingFont">Weapons</h3>
-        <input type="text" class="inputBlock" placeholder="Input" />
-        <img src="images/weapon.jpg" class="iconStyle"></img>
-        <div class="outputBlock">
-            OUTPUT
-        </div>
-        <button onClick="" class="button">
-            <div class="lootButtonFont"> Loot!</div>
-        </button>
+  <div class="outerBlock">
+    <h3 class="headingFont">Weapons</h3>
+    <input type="number" class="inputBlock" placeholder="Input" id="weaponNumberInput"  />
+    <img src="images/weapon.png" class="iconStyle"></img>
+    <div class="outputBlock">
+      <p id="weaponOutput"></p>
     </div>
-    <div class="outerBlock">
-        <h3 class="headingFont">Trinket</h3>
-        <input type="text" class="inputBlock" placeholder="Input" />
-        <img src="images/trinket.jpg" class="iconStyle"></img>
-        <div class="outputBlock">
-            OUTPUT
-        </div>
-        <button onClick="" class="button">
-            <div class="lootButtonFont"> Loot!</div>
-        </button>
+    <button onClick="genWeapon()" class="button">
+      <div class="lootButtonFont"> Loot Weapons!</div>
+    </button>
+  </div>
+
+  <div class="outerBlock">
+    <h3 class="headingFont">Trinket</h3>
+    <input type="number" class="inputBlock" placeholder="Input" id="trinketNumberInput"/>
+    <img src="images/trinket.png" class="iconStyle"></img>
+    <div class="outputBlock">
+      <p id="trinketOutput"></p>
     </div>
+    <button onClick="genTrinket()" class="button">
+      <div class="lootButtonFont"> Loot Trinkets!</div>
+    </button>
+  </div>
 
 </body>
-      <script src="script.js"></script>
+<script src="script.js"></script>
 </html>
