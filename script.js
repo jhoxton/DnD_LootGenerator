@@ -364,3 +364,8 @@ var weaponItems = Array(
     "Bladed-Staff - 1d8 slashing, Versatile(1d8 bludgeoning) ",
     "Broad sword - 2d4 slashing/piercing "
 )
+
+function genGear() {
+  document.getElementById("gearOutput").innerHTML = "OUTPUT FOR GEAR";
+
+}
