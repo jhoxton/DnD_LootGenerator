@@ -119,6 +119,48 @@ var gearItems = Array(
   "Cheese wedge",
   "Cheese wheel"
 )
+var weaponItems = Array(
+  "Club",
+  "Dagger",
+  "Greatclub",
+  "Handaxe ",
+  "Javelin ",
+  "Light Hammer ",
+  "Mace ",
+  "Quaterstaff ",
+  "Sickle ",
+  "Spear ",
+  "Light Crossbow ",
+  "Dart (10) ",
+  "Shortbow ",
+  "Sling ",
+  "Battleaxe ",
+  "Flail ",
+  "Glaive ",
+  "Greataxe ",
+  "Halbard ",
+  "Lance ",
+  "Longsword ",
+  "Moringstar ",
+  "Pike ",
+  "Rapier ",
+  "Shortsword ",
+  "Trident ",
+  "Warpick ",
+  "Warhammer ",
+  "Whip ",
+  "Blowgun ",
+  "Hand Crossbow ",
+  "Heavy Crossbow ",
+  "Longbow ",
+  "Net ",
+  "Sabre - 1d6, slashing, Versitile(1d8)  ",
+  "Spiked Maul - 1d8 bludgeoning	 ",
+  "Kartana - 1d8 slashing, Versitile(1d10)  ",
+  "Boomarang -  1d4 bludgeoning, Returning",
+  "Bladed-Staff - 1d8 slashing, Versatile(1d8 bludgeoning) ",
+  "Broad sword - 2d4 slashing/piercing "
+)
 var trinketItems = Array(
   "A mummified goblin hand ",
   "A piece o f crystal that faintly glows in the moonlight ",
@@ -322,48 +364,8 @@ var trinketItems = Array(
   "A large piece of shell from a dragon's egg ",
   "An unflatering water color of a Dragonborn called Vlad"
 )
-var weaponItems = Array(
-  "Club",
-  "Dagger",
-  "Greatclub",
-  "Handaxe ",
-  "Javelin ",
-  "Light Hammer ",
-  "Mace ",
-  "Quaterstaff ",
-  "Sickle ",
-  "Spear ",
-  "Light Crossbow ",
-  "Dart (10) ",
-  "Shortbow ",
-  "Sling ",
-  "Battleaxe ",
-  "Flail ",
-  "Glaive ",
-  "Greataxe ",
-  "Halbard ",
-  "Lance ",
-  "Longsword ",
-  "Moringstar ",
-  "Pike ",
-  "Rapier ",
-  "Shortsword ",
-  "Trident ",
-  "Warpick ",
-  "Warhammer ",
-  "Whip ",
-  "Blowgun ",
-  "Hand Crossbow ",
-  "Heavy Crossbow ",
-  "Longbow ",
-  "Net ",
-  "Sabre - 1d6, slashing, Versitile(1d8)  ",
-  "Spiked Maul - 1d8 bludgeoning	 ",
-  "Kartana - 1d8 slashing, Versitile(1d10)  ",
-  "Boomarang -  1d4 bludgeoning, Returning",
-  "Bladed-Staff - 1d8 slashing, Versatile(1d8 bludgeoning) ",
-  "Broad sword - 2d4 slashing/piercing "
-)
+
+// TODO: Weapon array has undifineds
 
 // OUTPUT ARRAYS
 var gearReturn = Array()
@@ -387,9 +389,31 @@ function genGear() {
   document.getElementById("gearOutput").innerHTML = output;
 }
 
+// GETS RANDOM WEAPON ITEMS AND ADD THEM TO THE NEW WEAPON ARRAY
+function genWeapon() {
+  weaponReturn.length = 0;
+  output = "";
+  var weaponNumber = document.getElementById("weaponNumberInput").value;
+  for (var x = 0; x < weaponNumber; x++) {
+    const weaponRandom = weaponItems[Math.floor(Math.random() * weaponItems.length - 1)];
+    weaponReturn.push(weaponRandom);
+  }
+  weaponReturn.forEach(print);
+  document.getElementById("weaponOutput").innerHTML = output;
+}
 
-
-
+// GETS RANDOM TRINKET ITEMS AND ADD THEM TO THE NEW TRKINKET ARRAY
+function genTrinket() {
+  trinketReturn.length = 0;
+  output = "";
+  var trinketNumber = document.getElementById("trinketNumberInput").value;
+  for (var x = 0; x < trinketNumber; x++) {
+    const trinketRandom = trinketItems[Math.floor(Math.random() * trinketItems.length - 1)];
+    trinketReturn.push(trinketRandom);
+  }
+  trinketReturn.forEach(print);
+  document.getElementById("trinketOutput").innerHTML = output;
+}
 
 // FORMAT OUTPUT STRING
 function print(value, index, array) {
@@ -397,6 +421,7 @@ function print(value, index, array) {
 }
 
 function resetInput() {
-  var clear = "";
   document.getElementById('gearNumberInput').value = "";
+  document.getElementById('weaponNumberInput').value = "";
+  document.getElementById('trinketNumberInput').value = "";
 }
