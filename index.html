@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="style.css">
@@ -9,8 +10,8 @@
 </head>
 
 <body>
-  <div class="outerBlock" >
-    <h3 class="headingFont" >Gear</h3>
+  <div class="outerBlock">
+    <h3 class="headingFont">Gear</h3>
     <input type="number" class="inputBlock" placeholder="Input" id="gearNumberInput" />
     <div>
       <img src="images/gear.png" class="iconStyle"></img>
@@ -25,7 +26,7 @@
 
   <div class="outerBlock">
     <h3 class="headingFont">Weapons</h3>
-    <input type="number" class="inputBlock" placeholder="Input" id="weaponNumberInput"  />
+    <input type="number" class="inputBlock" placeholder="Input" id="weaponNumberInput" />
     <img src="images/weapon.png" class="iconStyle"></img>
     <div class="outputBlock">
       <p id="weaponOutput"></p>
@@ -37,7 +38,7 @@
 
   <div class="outerBlock">
     <h3 class="headingFont">Trinket</h3>
-    <input type="number" class="inputBlock" placeholder="Input" id="trinketNumberInput"/>
+    <input type="number" class="inputBlock" placeholder="Input" id="trinketNumberInput" />
     <img src="images/trinket.png" class="iconStyle"></img>
     <div class="outputBlock">
       <p id="trinketOutput"></p>
@@ -47,6 +48,49 @@
     </button>
   </div>
 
+  <div class="outerBlock">
+    <h3 class="headingFont">Coins</h3>
+
+    <div class="coinSelectDesktop">
+      <label for="smlCoin">Small<br />
+        <input type="radio" id="smlCoin" name="smlCoin" value="1" />
+      </label>
+
+      <label for="medCoin">Medium<br />
+        <input type="radio" id="medCoin" name="medCoin" value="2" />
+      </label>
+
+      <label for="lrgCoin">Large<br />
+        <input type="radio" id="lrgCoin" name="lrgCoin" value="3" />
+      </label>
+    </div>
+
+
+    <div class="coinSelectMobile">
+        <input type="radio" id="smlCoin" name="smlCoin" value="1" />
+        <label for="smlCoin">Small</label>
+        <br>
+
+        <input type="radio" id="medCoin" name="medCoin" value="2" />
+        <label for="medCoin">Medium</label>
+        <br>
+
+        <input type="radio" id="lrgCoin" name="lrgCoin" value="3" />
+        <label for="lrgCoin">Large</label>
+        <br>
+
+    </div>
+
+    <img src="images/gold.png" class="iconStyle"></img>
+    <div class="outputBlock">
+      <p id="trinketOutput"></p>
+    </div>
+    <button onClick="genTrinket()" class="button">
+      <div class="lootButtonFont"> Loot Coins!</div>
+    </button>
+  </div>
+
 </body>
 <script src="script.js"></script>
+
 </html>
