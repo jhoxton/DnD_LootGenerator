@@ -431,7 +431,7 @@ function coinGen() {
   var gold;
   var silver;
   var copper;
-  
+
   var sml;
   var med;
   var lrg;
@@ -466,6 +466,7 @@ function randomAmount (randNum, randRange) {
 
 function coinPrint(gold, silver, copper) {
   document.getElementById('goldOutput').innerHTML = (gold + " Gold pieces" + "<br>" + silver) + " Silver Pieces" + "<br>" + copper + " Copper Pieces";
+
 }
 
 // FORMAT GEAR/WEAPONS/TRINKETS OUTPUT STRING
