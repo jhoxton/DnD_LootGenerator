@@ -1,7 +1,6 @@
 console.log("Welcome to the loot generator. If you're reading this, I'd say you know what you're doing (probably more so than me), so feel free to make any improvements!");
 
 // ARRAYS OF ALL ITEMS
-
 var gearItems = Array(
   "Abacus - 2gp, 2lb. ",
   "Acid (vial) - 25 gp, 1lb",
@@ -366,8 +365,6 @@ var trinketItems = Array(
   "An unflatering water color of a Dragonborn called Vlad"
 )
 
-// TODO: Weapon array has undifineds
-
 // OUTPUT ARRAYS
 var gearReturn = Array()
 var trinketReturn = Array()
@@ -427,8 +424,52 @@ function genTrinket() {
   trinketReturn.forEach(print);
   document.getElementById("trinketOutput").innerHTML = output;
 }
+// COIN LOGIC
 
-// FORMAT OUTPUT STRING
+
+function coinGen() {
+  var gold;
+  var silver;
+  var copper;
+
+  var sml;
+  var med;
+  var lrg;
+
+  var randNum;
+  var randRange;
+
+  if (sml = document.getElementById('smallCoinInput').checked) {
+    gold = randomAmount(randNum, 10);
+    silver = randomAmount(randNum, 15);
+    copper = randomAmount(randNum, 20);
+    coinPrint(gold, silver, copper);
+
+  } else if (med =document.getElementById('medCoinInput').checked) {
+    gold = randomAmount(randNum, 18);
+    silver = randomAmount(randNum, 20);
+    copper = randomAmount(randNum, 25);
+    coinPrint(gold, silver, copper);
+
+  } else if (lrg = document.getElementById('largeCoinInput').checked) {
+    gold = randomAmount(randNum, 25);
+    silver = randomAmount(randNum, 30);
+    copper = randomAmount(randNum, 40);
+    coinPrint(gold, silver, copper);
+  }
+}
+
+function randomAmount (randNum, randRange) {
+  randNum = Math.floor((Math.random() * randRange) + 1);
+  return randNum;
+}
+
+function coinPrint(gold, silver, copper) {
+  document.getElementById('goldOutput').innerHTML = (gold + " Gold pieces" + "<br>" + silver) + " Silver Pieces" + "<br>" + copper + " Copper Pieces";
+
+}
+
+// FORMAT GEAR/WEAPONS/TRINKETS OUTPUT STRING
 function print(value, index, array) {
   output = output + value + "<br>";
 }

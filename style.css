@@ -1,64 +1,102 @@
 * {
-    box-sizing: border-box;
-
+  box-sizing: border-box;
 }
+
 body {
   background-image: url('images/wp_1.jpg');
 }
-
+@media screen and (min-width: 1100px) {
+  .outerBlock  {
+      width: 70%;
+  }
+}
 .outerBlock {
-    margin: auto;
-    margin-bottom: 4px;
-    margin-top: 4px;
-    width: 50%;
-    border: 3px solid black;
-    padding: 10px;
-    position: relative;
-     min-width: 342px;
+  margin: auto;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  border: 3px solid black;
+  padding: 10px;
+  position: relative;
+  min-width: 342px;
 }
+
 .headingFont {
-    font-family: 'Aclonica';
-    font-size: 42px;
-    margin: 0%;
+  font-family: 'Aclonica';
+  font-size: 42px;
+  margin: 0%;
 }
+
 .inputBlock {
-    width: 40%;
-    margin: 10px;
-    font-family: 'Aclonica';
-    font-size: 15px;
+  border: 3px solid black;
+  width: 70%;
+  margin: 10px;
+  font-family: 'Aclonica';
+  font-size: 15px;
 }
+
 input[type=number] {
   font-family: 'Aclonica';
   font-size: 20px;
 }
+
 .iconStyle {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    max-width: 100px;
-    min-width: 100px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  max-width: 100px;
+  min-width: 100px;
 }
+
 .outputBlock {
-    border: 3px solid black;
-    margin: 10px;
-    padding: 10px;
-    max-width: 78%;
-    background-color: #fff;
+  border: 3px solid black;
+  margin: 10px;
+  padding: 10px;
+  max-width: 70%;
+  background-color: #fff;
 }
+
 .outputBlock p {
   font-family: 'Aclonica';
   font-size: 15px;
 }
+
 .button {
-    padding: 3px;
-    margin-top: 1%;
-    border-width: 3%;
-    text-align: center;
-    width: 50%;
-    margin-left: 30%;
-    margin-right: 30%
+  padding: 3px;
+  margin-top: 1%;
+  border-width: 3%;
+  width: 70%;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid black;
 }
+
 .lootButtonFont {
-    font-family: 'Aclonica';
-    font-size: 22px;
+  font-family: 'Aclonica';
+  font-size: 22px;
+}
+
+/* COIN SECTION STYLING */
+.coinSelect input[type=radio] {
+  border: 10px;
+  /* width: 100%; */
+  height: 2em;
+}
+
+.coinSelect {
+  font-size: 22px;
+  font-family: 'Aclonica';
+}
+
+.coinSelect input[type=radio] {
+  height: 2em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
