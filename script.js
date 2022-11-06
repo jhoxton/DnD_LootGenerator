@@ -426,7 +426,6 @@ function genTrinket() {
 }
 // COIN LOGIC
 
-
 function coinGen() {
   var gold;
   var silver;
